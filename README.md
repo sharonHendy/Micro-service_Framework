@@ -1,7 +1,7 @@
 # Micro-service_Framework
 ### A simple micro-service framework that uses various multithreading techniques, on top of which is implemented a system for managing the university compute resources. In the system students can train models, test them and publish their results.
   
-the program takes as input a list of students and their models, GPUs, CPUs, conferences and the duration of the program in millisecs. an example input file is givven in the root dir.
+the program takes as input a list of students and their models, GPUs, CPUs, conferences and the duration of the program in millisecs. an example input file is given in the root directory.
 The output of the program is redirected to the file /src/main/java/file.json.
   
 ### Micro-Service framework
