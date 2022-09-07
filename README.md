@@ -8,15 +8,15 @@ The output of the program is redirected to the file /src/main/java/file.json.
 the Micro-Service framework consists of two main parts: A Message-Bus and Micro-Services. Each Micro-Service is a
 thread that can exchange messages with other Micro-Services using a shared object
 referred to as the Message-Bus. There are two different types of messages: 
-- Events - an action that needs to be processed. Each Micro-Service specializes in processing one or more types of events.
+- __Events__ - an action that needs to be processed. Each Micro-Service specializes in processing one or more types of events.
 Upon receiving an event, the Message-Bus assigns it to the messages queue of an appropriate Micro-Service which is subscribed to this type of
 event.
-- Broadcasts - global announcements in the system. Each Micro-Service can subscribe to the type of broadcast messages it is interested to receive.
+- __Broadcasts__ - global announcements in the system. Each Micro-Service can subscribe to the type of broadcast messages it is interested to receive.
 
 ### Compute Resources Management System  
 Students can create the “TrainModel” event in order to start training a model. 
-Once such an event is sent, a chain of events starts - the Message Bus inserts the event to a GPU queue, the GPU processes the message by sending data batches to 
-the Cluster for the CPUs to process, and trainig the processed data after receiving it from the Cluster (the GPUs have a limited amount of processed data they can store).
+Once such an event is sent, a chain of events starts - the Message Bus inserts the event to a __GPU__ queue, the GPU processes the message by sending data batches to 
+the __Cluster__ for the __CPUs__ to process, and trainig the processed data after receiving it from the Cluster (the GPUs have a limited amount of processed data they can store).
 when the GPU finishes the training the event is resolved.  
 In addition, when a student finishes training a model, he can create another event
 “TestModel”, which will be handled by the GPU, and will return results.
