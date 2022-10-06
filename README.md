@@ -25,6 +25,6 @@ Results are submitted to a new type of Micro-Service, `Conference’, each confe
 aggregate results from students, and on a set predefined time, will Broadcast the
 aggregated results to all the students.
 
-#### command:
+#### commands:
 mvn compile  
 mvn exec:java -Dexec.mainClass="bgu.spl.mics.application.CRMSRunner" -Dexec.args="example_input.json"
